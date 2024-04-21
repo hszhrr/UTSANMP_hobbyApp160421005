@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hobby_navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.ubayadev.hobbyapp_160421005.view.BeritaListFragment"
+        android:label="fragment_berita"
+        tools:layout="@layout/fragment_berita" >
+        <action
+            android:id="@+id/actionBeritaDetail"
+            app:destination="@id/beritaDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/beritaDetailFragment"
+        android:name="com.ubayadev.hobbyapp_160421005.view.BeritaDetailFragment"
+        android:label="fragment_berita_detail"
+        tools:layout="@layout/fragment_berita_detail" >
+        <action
+            android:id="@+id/actionDetailToHome"
+            app:destination="@id/itemHome" />
+        <argument
+            android:name="beritaId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.ubayadev.hobbyapp_160421005.view.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/itemReadHistory"
+        android:name="com.ubayadev.hobbyapp_160421005.view.ReadHistoryFragment"
+        android:label="fragment_read_history"
+        tools:layout="@layout/fragment_read_history" />
+</navigation>
